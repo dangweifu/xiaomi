@@ -28,7 +28,12 @@ public class TestController {
 
 
     @GetMapping("/index")
-    public Object testMethod(){
+    public Object testMethod_1(){
+        return service.selectIds();
+    }
+
+    @GetMapping("/index/test")
+    public Object testMethod_2(){
         return service.selectIds();
     }
 
