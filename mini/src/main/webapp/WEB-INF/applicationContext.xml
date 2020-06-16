@@ -20,7 +20,7 @@
         <!--<task:scheduled ref="runtimeInformation" method="checkIsFaBu" cron="0 0/5 * * * ?" />-->
         <!--<task:scheduled ref="runtimeInformation" method="publishPage" cron="0/30 * * * * ?" />-->
         <!--五分钟扫面一下失败的数据，并重新发布-->
-        <task:scheduled ref="runtimeInformation" method="rePush" cron="0 0/5 * * * ?" />
+        <task:scheduled ref="runtimeInformation" method="rePush" cron="0/5 * * * * ?" />
     </task:scheduled-tasks>
     <task:executor id="executor" pool-size="5" />
 </beans>

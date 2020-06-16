@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 /**
  * <class说明>： Created by WiuLuS on 2020/01/02.
@@ -23,6 +24,7 @@ public class TestController {
 
     @GetMapping("/first/{name}/{age}/{sex}")
     public Object testMethod(@PathVariable String name , @PathVariable String age , @PathVariable String sex){
+        String concat = Stream.of("A", "B", "C", "D").reduce("", String::concat);
         return "name is : " + name + " , age is : " + age + " , sex is : " + sex ;
     }
 
@@ -34,6 +36,7 @@ public class TestController {
 
     @GetMapping("/index/test")
     public Object testMethod_2(){
+        String concat = Stream.of("A", "B", "C", "D").reduce("", String::concat);
         return service.selectIds();
     }
 

@@ -14,15 +14,9 @@ public class SystemRuntimeInformation {
 	 */
 	public void rePush(){
 		long start = System.currentTimeMillis();
-//        boolean b = ConcurrentUtil.bindHibernateSessionToThread(sessionFactory);
-//        try {
-            log.info("定时补偿发布失败数据------------start-------------");
-//            serviceI.rePush();
-            log.info("定时补偿发布失败数据------------end 耗时：{}-------------",(System.currentTimeMillis()-start));
-//        }finally {
-//            ConcurrentUtil.closeHibernateSessionFromThread(b,sessionFactory);
-//        }
-
+		System.out.println("定时任务开始：---");
+		System.out.println("定时任务结束：---");
+		System.out.println("共耗时：" + (System.currentTimeMillis()-start));
 	}
 
 
